@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Upload a Resume</title>
+  </head>
+  <body>
+    <h1>Upload a Resume</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <label for="resume">Resume:</label>
+      <input type="file" name="resume" id="resume">
+      <br><br>
+      <label for="job_title">Job Title:</label>
+      <input type="text" name="job_title" id="job_title">
+      <br><br>
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location">
+      <br><br>
+      <input type="submit" value="Upload and Generate">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+  </body>
+</html>

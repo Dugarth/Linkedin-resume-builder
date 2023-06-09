@@ -55,7 +55,7 @@ def extract_text_from_file(file):
 
 def get_job_offers(job_info):
     headers = {
-        'X-RapidAPI-Key': "9cc58a660amshb2823861842fa65p110cdajsn034838827075",
+        'X-RapidAPI-Key': "Rapidi-Key",
         'X-RapidAPI-Host': "jsearch.p.rapidapi.com"
     }
 
@@ -82,7 +82,7 @@ def get_job_offers(job_info):
     return job_offers
 
 def generate_resume_summaries(text, job_offers):
-    openai.api_key = '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'
+    openai.api_key = 'OpenAi-key'
 
     user_info = text
 
@@ -133,7 +133,7 @@ def analyze_text(text):
     chunks = split_text_into_chunks(text)
 
     # Summarize each chunk using GPT-3.5
-    openai.api_key = "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"
+    openai.api_key = "OpenAi-key"
     summaries = []
 
     for chunk in chunks:

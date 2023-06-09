@@ -6,7 +6,7 @@ def get_job_description(job_query, api_key):
     url = "https://jobsearcher.p.rapidapi.com/search"
     querystring = {"q": job_query, "country": "US"}
     headers = {
-        'X-RapidAPI-Key': "9cc58a660amshb2823861842fa65p110cdajsn034838827075",
+        'X-RapidAPI-Key': "Rapidi-Key",
         'X-RapidAPI-Host': "jsearch.p.rapidapi.com"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
@@ -16,7 +16,7 @@ def get_job_description(job_query, api_key):
         return None
 
 def generate_resume(doc_path, job_description, api_key):
-    openai.api_key = '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'
+    openai.api_key = 'OpenAi-key'
     text = process(doc_path)
     prompt = f"I have a resume with the following details:\n{text}\nAnd I am applying for a job with this description:\n{job_description}\nHow should I modify my resume?"
 
